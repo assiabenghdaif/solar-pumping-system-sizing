@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="583.0" prefWidth="894.0" style="-fx-background-color: #121436;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.homeController">
+    <children>
+        <Pane prefHeight="77.0" prefWidth="894.0" style="-fx-background-color: #1E224F;">
+            <children>
+                <Button fx:id="close" layoutX="842.0" layoutY="2.0" mnemonicParsing="false" onMouseClicked="#closeAction" prefHeight="36.0" prefWidth="50.0" styleClass="buttonClose" stylesheets="@toolBarCSS.css">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                    <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@Images/icons8-multiply-30.png" />
+                            </image>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button fx:id="reduire" layoutX="791.0" layoutY="2.0" mnemonicParsing="false" onMouseClicked="#reduireAction" prefHeight="36.0" prefWidth="50.0" styleClass="buttonreduire" stylesheets="@toolBarCSS.css">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                    <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@Images/icons8-moins-30.png" />
+                            </image>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <ImageView fitHeight="67.0" fitWidth="126.0" layoutX="14.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@Images/logo.jpeg" />
+                    </image>
+                </ImageView>
+            </children>
+        </Pane>
+        <Pane prefHeight="510.0" prefWidth="894.0">
+            <children>
+                <Button fx:id="start" layoutX="345.0" layoutY="268.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="47.0" prefWidth="239.0" stylesheets="@application.css" text="START" textFill="#f8f5f5">
+                    <font>
+                        <Font name="SansSerif Bold" size="17.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <ImageView fitHeight="82.0" fitWidth="90.0" layoutX="345.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                    <image>
+                        <Image url="@Images/pannauxm.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="82.0" fitWidth="83.0" layoutX="501.0" layoutY="142.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@Images/rebinet.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="89.0" fitWidth="95.0" layoutX="217.0" layoutY="234.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@Images/reservoirm.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="130.0" fitWidth="107.0" layoutX="625.0" layoutY="214.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@Images/pompm.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="301.0" layoutY="376.0" prefHeight="59.0" prefWidth="328.0" stylesheets="@application.css" text="Welcome To ATMOSTECH">
+                    <font>
+                        <Font name="Tahoma" size="27.0" />
+                    </font>
+                </Label>
+                <Label fx:id="check" alignment="CENTER" layoutX="666.0" layoutY="458.0" onMouseClicked="#handleMeteo" prefHeight="47.0" prefWidth="228.0" styleClass="meteo" stylesheets="@application.css" text="Check the weater" textAlignment="CENTER" textFill="#fffdfd">
+                    <font>
+                        <Font name="SansSerif Regular" size="14.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Label>
+            <Label layoutX="354.0" layoutY="428.0" prefHeight="30.0" prefWidth="221.0" stylesheets="@application.css" text="Enginneering &amp; Solutions" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            </children>
+            <cursor>
+                <Cursor fx:constant="DEFAULT" />
+            </cursor>
+        </Pane>
+    </children>
+</VBox>

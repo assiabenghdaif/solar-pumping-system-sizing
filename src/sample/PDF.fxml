@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="939.0" prefWidth="509.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.PDFController">
+   <children>
+      <TableView fx:id="tablePUMP" layoutX="73.0" layoutY="68.0" prefHeight="454.0" prefWidth="376.0">
+        <columns>
+          <TableColumn fx:id="dataPUMP" prefWidth="188.00006103515625" text="DATA" />
+          <TableColumn fx:id="valuePUMP" prefWidth="179.99993896484375" text="VALUES" />
+        </columns>
+      </TableView>
+      <Label layoutX="45.0" layoutY="23.0" text="Choice of pump" />
+      <Label layoutX="12.0" layoutY="591.0" text="Photovoltaic fields" />
+      <TableView fx:id="tablePV" layoutX="60.0" layoutY="626.0" prefHeight="131.0" prefWidth="376.0">
+         <columns>
+            <TableColumn fx:id="dataPV" prefWidth="188.00006103515625" text="DATA" />
+            <TableColumn fx:id="valuePV" prefWidth="179.99993896484375" text="VALUES" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,15 @@
+.button{
+	-fx-background-color : #1E224F;
+	-fx-background-radius :30;
+}
+.button:hover
+{
+-fx-background-color : #1a3779;
+}
+.button:pressed
+{
+-fx-background-color : #0c2a60;
+}
+.label{
+	-fx-text-fill:linear-gradient(#1E224F,#fff);
+}

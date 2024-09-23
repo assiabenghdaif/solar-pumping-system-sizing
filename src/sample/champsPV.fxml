@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="672.0" prefWidth="382.0" style="-fx-background-color: #121436;" stylesheets="@application.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.champsPVController">
+   <children>
+      <Label layoutX="30.0" layoutY="69.0" text="The pump power" textFill="WHITE" AnchorPane.leftAnchor="30.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="140.0" prefHeight="26.0" prefWidth="342.0" text="PV module : Solar panel" textFill="WHITE" AnchorPane.leftAnchor="20.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="182.0" text="Voltage Ump" textFill="WHITE" AnchorPane.leftAnchor="30.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="267.0" text="Peak power" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="31.0" layoutY="226.0" prefHeight="18.0" prefWidth="85.0" text="Current ISC" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="20.0" layoutY="309.0" text="The controller" textFill="WHITE" AnchorPane.leftAnchor="20.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="345.0" text="Max voltage in" textFill="WHITE" AnchorPane.leftAnchor="30.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="394.0" text="Min voltage in" textFill="WHITE" AnchorPane.leftAnchor="30.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="437.0" text="Max current in" textFill="WHITE" AnchorPane.leftAnchor="30.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="31.0" layoutY="484.0" text="Efficiency" textFill="WHITE" AnchorPane.leftAnchor="30.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" prefHeight="30.0" prefWidth="382.0" text="Photovoltaic Fields" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="6.0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="39.0" layoutY="537.0" text="Losses" textFill="WHITE" AnchorPane.leftAnchor="30.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="22.0" layoutY="575.0" text="Number of modules in series" textFill="WHITE" AnchorPane.leftAnchor="30.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button layoutX="233.0" layoutY="617.0" mnemonicParsing="false" style="-fx-background-color: #1E224F; -fx-background-radius: 30;" stylesheets="@application.css" text="Validate" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TextField layoutX="34.0" layoutY="90.0" style="-fx-background-radius: 10;" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="30.0" />
+      <TextField layoutX="124.0" layoutY="178.0" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 10;" />
+      <TextField layoutX="123.0" layoutY="221.0" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 10;" />
+      <TextField layoutX="124.0" layoutY="262.0" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 10;" />
+      <TextField layoutX="124.0" layoutY="340.0" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 10;" />
+      <TextField layoutX="124.0" layoutY="389.0" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 10;" />
+      <TextField layoutX="123.0" layoutY="432.0" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 10;" />
+      <TextField layoutX="123.0" layoutY="479.0" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 10;" />
+      <TextField layoutX="124.0" layoutY="523.0" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 10;" />
+      <TextField layoutX="199.0" layoutY="570.0" prefHeight="26.0" prefWidth="162.0" style="-fx-background-radius: 10;" />
+      <Button layoutX="76.0" layoutY="617.0" mnemonicParsing="false" onAction="#returnAction" prefHeight="30.0" prefWidth="69.0" style="-fx-background-color: #1E224F; -fx-background-radius: 30;" stylesheets="@application.css" text="Return" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

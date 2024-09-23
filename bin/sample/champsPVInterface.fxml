@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="671.0" prefWidth="1300.0" style="-fx-background-color: #121436;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.champsPVController">
+    <children>
+        <HBox prefHeight="65.0" prefWidth="1371.0" style="-fx-background-color: #1e224f;">
+            <children>
+                <AnchorPane prefHeight="38.0" prefWidth="1300.0">
+                    <children>
+                        <ImageView fx:id="close" fitHeight="27.0" fitWidth="28.0" onMouseClicked="#closeAction" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="12.0">
+                            <image>
+                                <Image url="@Images/icons8-multiply-30.png" />
+                            </image>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </ImageView>
+                        <ImageView fx:id="reduire" fitHeight="27.0" fitWidth="27.0" layoutX="1302.7999999999997" layoutY="2.0" onMouseClicked="#reduireAction" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="42.0">
+                            <image>
+                                <Image url="@Images/icons8-moins-30.png" />
+                            </image>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </ImageView>
+                    </children>
+                </AnchorPane>
+            </children>
+        </HBox>
+        <SplitPane dividerPositions="0.292, 0.812" focusTraversable="true" prefHeight="571.0" prefWidth="900.0" style="-fx-background-color: #121436;" VBox.vgrow="ALWAYS">
+            <items>
+            <AnchorPane fx:id="pane1" prefHeight="672.0" prefWidth="382.0" style="-fx-background-color: #121436;">
+               <children>
+                  <Label alignment="CENTER" layoutY="1.0" prefHeight="38.0" prefWidth="377.0" stylesheets="@application.css" text="Photovoltaic Fields" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="16.0" layoutY="39.0" minWidth="58.0" prefHeight="27.0" prefWidth="154.0" style="&#10;" text="The pump power" textAlignment="CENTER" textFill="WHITE" wrapText="false" AnchorPane.leftAnchor="16.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" fx:id="x11" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="110.0" text="PV module : Solar panel" textFill="WHITE" AnchorPane.leftAnchor="14.0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="21.0" layoutY="202.0" text="Current ISC" textFill="WHITE" AnchorPane.leftAnchor="21.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="21.0" layoutY="244.0" text="Peak power" textFill="WHITE" AnchorPane.leftAnchor="21.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="16.0" layoutY="279.0" text="The controller" textFill="WHITE" AnchorPane.leftAnchor="16.0">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="max_voltage" layoutX="24.0" layoutY="315.0" text="Max voltage in" textFill="WHITE" AnchorPane.leftAnchor="24.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="min_voltage" layoutX="24.0" layoutY="361.0" prefHeight="17.0" prefWidth="85.0" text="Min voltage in" textFill="WHITE" AnchorPane.leftAnchor="24.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="max_current" layoutX="24.0" layoutY="409.0" prefHeight="17.0" prefWidth="85.0" text="Max current in" textFill="WHITE" AnchorPane.leftAnchor="24.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="efficiency" layoutX="24.0" layoutY="457.0" prefHeight="17.0" prefWidth="85.0" text="Efficiency" textFill="WHITE" AnchorPane.leftAnchor="24.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="number_in_series" layoutX="28.0" layoutY="556.0" text="Number of modules in series" textFill="WHITE" AnchorPane.leftAnchor="24.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="pump_pwer" layoutX="24.0" layoutY="68.0" onMouseClicked="#pump" prefHeight="26.0" prefWidth="320.0" style="-fx-background-radius: 10;" AnchorPane.leftAnchor="24.0" />
+                  <TextField fx:id="voltage_ump" layoutX="122.0" layoutY="154.0" onMouseClicked="#power" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 10;" AnchorPane.leftAnchor="122.0" />
+                  <TextField fx:id="current_isc" layoutX="122.0" layoutY="197.0" onMouseClicked="#power" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 10;" AnchorPane.leftAnchor="122.0" />
+                  <TextField fx:id="peak_power" layoutX="122.0" layoutY="239.0" onMouseClicked="#power" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 10;" AnchorPane.leftAnchor="122.0" />
+                  <TextField fx:id="max_v_in" layoutX="122.0" layoutY="310.0" onMouseClicked="#normal" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 10;" AnchorPane.leftAnchor="122.0" />
+                  <TextField fx:id="min_v_in" layoutX="122.0" layoutY="357.0" onMouseClicked="#normal" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 10;" AnchorPane.leftAnchor="122.0" />
+                  <TextField fx:id="max_c_in" layoutX="122.0" layoutY="405.0" onMouseClicked="#normal" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 10;" AnchorPane.leftAnchor="122.0" />
+                  <TextField fx:id="serie" layoutX="201.0" layoutY="552.0" onMouseClicked="#power" prefHeight="26.0" prefWidth="154.0" style="-fx-background-radius: 10;" />
+                  <Button fx:id="ret" layoutX="48.0" layoutY="616.6" mnemonicParsing="false" onAction="#returnAction" prefHeight="29.0" prefWidth="121.0" style="-fx-background-radius: 30; -fx-background-color: #1E224F;" stylesheets="@application.css" text="Return" textFill="WHITE" AnchorPane.bottomAnchor="1.0000000000000213" AnchorPane.leftAnchor="48.0">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Label layoutX="17.0" layoutY="159.0" text="Voltage Ump" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="efficiency" layoutX="122.0" layoutY="453.0" onMouseClicked="#normal" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 10;" />
+                  <TextField fx:id="perte" layoutX="122.0" layoutY="500.0" onMouseClicked="#normal" prefHeight="26.0" prefWidth="233.0" style="-fx-background-radius: 10;" />
+                  <Label fx:id="losses" layoutX="24.0" layoutY="507.0" prefHeight="17.0" prefWidth="85.0" text="Losses" textFill="WHITE" AnchorPane.leftAnchor="24.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="validate" layoutX="198.00000000000003" layoutY="627.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="121.0" style="-fx-background-radius: 30; -fx-background-color: #1E224F;" stylesheets="@application.css" text="Validate" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </AnchorPane>
+                <ScrollPane prefHeight="586.0" prefWidth="443.0" style="-fx-background-color: #121436;">
+                    <content>
+                        <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="723.0" prefWidth="742.0" style="-fx-background-color: #121436;">
+                            <children>
+                                <ImageView fx:id="imageFirst" fitHeight="458.0" fitWidth="496.0" layoutX="54.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@Images/KIT-POMPE-POMPAGE-SOLAIRE.png" />
+                                    </image>
+                                </ImageView>
+                        <Label alignment="CENTER" layoutX="24.0" layoutY="24.0" prefHeight="18.0" prefWidth="222.0" style="&#10;" stylesheets="@application.css" text="Pumping System" textAlignment="CENTER" textFill="WHITE" wrapText="false">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </ScrollPane>
+                <AnchorPane prefWidth="651.0" style="-fx-background-color: #121436;">
+                    <children>
+                        <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" style="&#10;" text="Details" textAlignment="CENTER" wrapText="false">
+                     <font>
+                                <Font name="System Bold" size="12.0" fx:id="x1" />
+                     </font></Label>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+        <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" style="-fx-background-color: #1E224F;" VBox.vgrow="NEVER">
+            <children>
+                <Label maxHeight="1.7976931348623157E308" maxWidth="-1.0" text="Left status" textFill="#9f9f9f" HBox.hgrow="ALWAYS">
+                    <font>
+                        <Font size="11.0" fx:id="x3" />
+                    </font>
+                </Label>
+                <Pane prefHeight="-1.0" prefWidth="-1.0" HBox.hgrow="ALWAYS" />
+                <Label font="$x3" maxWidth="-1.0" text="Right status" HBox.hgrow="NEVER" />
+            </children>
+            <padding>
+                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+            </padding>
+        </HBox>
+    </children>
+</VBox>

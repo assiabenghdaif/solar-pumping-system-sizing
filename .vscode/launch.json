@@ -1,0 +1,20 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		
+		{
+			"vmArgs": "--module-path \"C:/Program Files/Java/jdk-11.0.11/javafx-sdk-11.0.2/lib\" --add-modules javafx.controls,javafx.fxml,javafx.base,javafx.graphics,javafx.media,javafx.swing,javafx.web",
+			"type": "java",
+			"name": "Launch Current File",
+			"request": "launch",
+			"mainClass": "${file}"
+		},
+		{
+			"vmArgs": "--module-path \"C:/Program Files/Java/jdk-11.0.11/javafx-sdk-11.0.2/lib\" --add-modules javafx.controls,javafx.fxml,javafx.base,javafx.graphics,javafx.media,javafx.swing,javafx.web",
+			"type": "java",
+			"name": "Launch App",
+			"request": "launch",
+			"mainClass": "sample.Main"
+		}
+	]
+}
